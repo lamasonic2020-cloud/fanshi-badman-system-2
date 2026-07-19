@@ -74,6 +74,7 @@ aiSubmit.addEventListener('click', async () => {
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || '服務暫時無法使用');
     const rows = [
+      ['他講的原話', message],
       ['直接翻譯', data.translation],
       ['他想拿什麼', data.goal],
       ['風險程度', data.risk],
